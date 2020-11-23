@@ -1,0 +1,441 @@
+/****CSS RESET****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+/****CSS RESET end****/
+
+
+/****HEADER****/
+#pageContainer {
+    overflow-x: hidden;
+    width: 100%;
+    display: inline-block;
+    max-width: 100%;
+    font-family: 'Lato', sans-serif;
+    color: #231F20;
+    margin-bottom: -6px;
+}
+
+#header {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 625px;
+    background: rgb(255,255,255);
+    background: linear-gradient(9deg, rgba(255,255,255,1) 51%, rgba(215,215,215,1) 100%);
+    overflow: hidden;
+    background-image: url(images/sol-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#solLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#introStripe {
+    background: #2C8C99;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    height: 375px;
+    width: 200%;
+    transform: translate(-50%, -50%) rotate(-33deg);
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    z-index: 1;
+}
+
+#introStripe2 {
+    background: #2C8C99;
+    height: auto;
+    padding: 55px 8% 135px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    margin-top: -7px;
+    position: relative;
+    text-align: center;
+}
+
+#introStripe2 h1 {
+    padding: 0 8% 0;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #EDC027;
+}
+
+#introStripe2 h2 {
+    padding: 5px 8% 0;
+    font-size: 30px;
+}
+
+#navBar {
+    display: inline-block;
+    width: 775px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p.navLink {
+    float: left;
+    padding: 0 60px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+p.navLink:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#mainContent {
+    display: inline-block;
+    width: 100%;
+    padding: 100px 0 0;
+    font-size: 17px;
+}
+
+#mainContent h3 {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+#summary, #inspiration, #awards, #contact {
+    padding: 210px 8%;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#summary {
+    padding-top: 0;
+}
+
+#solAward {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.subHead {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#menuLinks {
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#menuLinks a {
+    text-decoration: none;
+    background-color: #000;
+    background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#1a1a1a));
+    background-image: -webkit-linear-gradient(left, #000, #1a1a1a);
+    color: #fff;
+    padding: 16px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    transition: 0.3s all;
+    margin: 0 15px;
+}
+
+#menuLinks a:hover {
+    background-image: none;
+}
+
+#menuLinks a:first-of-type {
+    margin-left: 0;
+}
+
+#sol-three {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#sol-three img {
+    display: inline-block;
+    max-width: 30%;
+}
+
+img#index1 {
+    float: left;
+}
+
+img#index3 {
+    float: right;
+}
+
+img.divider {
+    position: absolute;
+    width: calc(100% + 15px);
+    right: 0;
+    max-width: none;
+    bottom: 0;
+}
+
+img.dividerTop {
+    position: absolute;
+    top: -2px;
+    transform: rotateY(180deg) rotate(180deg);
+    left: 0;
+    width: calc(100% + 15px);
+    max-width: none;
+}
+
+#introStripeTop {
+    background: #2C8C99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 55px;
+    width: 100%;
+}
+
+#introStripeTop2 {
+    background: #2C8C99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+}
+
+#socialLinks img {
+    float: left;
+    margin-left: 25px;
+}
+
+#socialLinks {
+    display: inline-block;
+    float: right;
+    padding-right: 8%;
+    margin-top: 10px;
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+#contactHead a {
+    color: #231F20;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+#contactHead a:first-of-type {
+  margin-left: 0;
+}
+
+#contactHead {
+    margin: 15px 0 0 8%;
+}
+
+#contactHead a img {
+    float: left;
+    width: 20px;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+#contactHead #phone img {
+    width: 19px;
+}
+
+.contactthree {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    background: #F1F1F1;
+    height: 280px;
+    padding: 30px;
+}
+
+#contactThree {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contactthree.contact1 {
+    float: left;
+}
+
+.contactthree.contact3 {
+    float: right;
+}
+
+.contactthree img {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.contactthree h4 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.contactthree a {
+    text-decoration: none;
+    color: #1E191A;
+}
+
+#footer {
+    background: #1E191A;
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+    padding: 14px;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+}
+
+#footerTop {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+img#footLogo {
+    display: inline-block;
+    width: 170px;
+    margin: 50px 0;
+}
+
+#footNav {
+    display: inline-block;
+}
+
+#footNavCont {
+    margin-bottom: 50px;
+    width: 100%;
+    display: inline-block;
+}
+
+#footNav p.navLink:hover {
+  color: #fff;
+}
+
+#contact .subHead a {
+    color: #000;
+}
+
+@media only screen and (max-width: 1000px) {
+    #solLogo {
+      width: 180px;
+      top: 52%;
+    }
+    #introStripe {
+      height: 290px;
+    }
+    #introStripe2 h1 {
+      font-size: 42px;
+    }
+    #introStripe2 h2 {
+      font-size: 26px;
+    }
+    p.navLink {
+      padding: 0 30px;
+      font-size: 17px;
+    }
+    #navBar {
+      width: 535px;
+    }
+}
+/****HEADER end****/
